@@ -4,7 +4,7 @@ from md5calc import *
 import gzip,os
 
 sql = "SELECT Link,MD5 From articles WHERE  Loaded=0"
-sql_u = "UPDATE articles SET Loaded = 1 WHERE Link = {link}"
+sql_u = "UPDATE articles SET Loaded = 1 WHERE Link = '{link}'"
 
 cur.execute(sql)
 for a in cur.fetchall():
